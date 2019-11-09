@@ -76,8 +76,8 @@ public class NotebookController {
 		return (List<Story>) storyRepository.findAll();
 	}
 
-	@RequestMapping(value = "/notebook/searchId/{storyId}", method = RequestMethod.GET)
-	public String searchNoteWithId(@PathVariable("storyId") String storyId) {
+	@RequestMapping(value = "/notebook/searchId/{Id}", method = RequestMethod.GET)
+	public String searchNoteWithId(@PathVariable("Id") String storyId) {
 		return storyRepository.findOne(Long.parseLong(storyId)).getStoryBook();
 	}
 
